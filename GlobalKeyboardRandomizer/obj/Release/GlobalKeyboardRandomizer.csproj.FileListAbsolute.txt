@@ -7,3 +7,12 @@ C:\Users\Alireza\source\repos\GlobalKeyboardRandomizer\GlobalKeyboardRandomizer\
 C:\Users\Alireza\source\repos\GlobalKeyboardRandomizer\GlobalKeyboardRandomizer\obj\Release\GlobalKeyboardRandomizer.csproj.CoreCompileInputs.cache
 C:\Users\Alireza\source\repos\GlobalKeyboardRandomizer\GlobalKeyboardRandomizer\obj\Release\GlobalKeyboardRandomizer.exe
 C:\Users\Alireza\source\repos\GlobalKeyboardRandomizer\GlobalKeyboardRandomizer\obj\Release\GlobalKeyboardRandomizer.pdb
+C:\Users\Alireza\Desktop\GlobalKeyboardBlocker\GlobalKeyboardRandomizer\bin\Release\GlobalKeyboardRandomizer.exe.config
+C:\Users\Alireza\Desktop\GlobalKeyboardBlocker\GlobalKeyboardRandomizer\bin\Release\GlobalKeyboardRandomizer.exe
+C:\Users\Alireza\Desktop\GlobalKeyboardBlocker\GlobalKeyboardRandomizer\bin\Release\GlobalKeyboardRandomizer.pdb
+C:\Users\Alireza\Desktop\GlobalKeyboardBlocker\GlobalKeyboardRandomizer\obj\Release\GlobalKeyboardRandomizer.csproj.AssemblyReference.cache
+C:\Users\Alireza\Desktop\GlobalKeyboardBlocker\GlobalKeyboardRandomizer\obj\Release\GlobalKeyboardRandomizer.Properties.Resources.resources
+C:\Users\Alireza\Desktop\GlobalKeyboardBlocker\GlobalKeyboardRandomizer\obj\Release\GlobalKeyboardRandomizer.csproj.GenerateResource.cache
+C:\Users\Alireza\Desktop\GlobalKeyboardBlocker\GlobalKeyboardRandomizer\obj\Release\GlobalKeyboardRandomizer.csproj.CoreCompileInputs.cache
+C:\Users\Alireza\Desktop\GlobalKeyboardBlocker\GlobalKeyboardRandomizer\obj\Release\GlobalKeyboardRandomizer.exe
+C:\Users\Alireza\Desktop\GlobalKeyboardBlocker\GlobalKeyboardRandomizer\obj\Release\GlobalKeyboardRandomizer.pdb

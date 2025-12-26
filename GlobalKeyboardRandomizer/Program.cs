@@ -12,59 +12,48 @@ namespace RandomKeyboard
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RandomKeyboardContext());
+
+            // فقط Context بدون فرم
+            Application.Run(new HiddenKeyboardContext());
         }
     }
 
-    class RandomKeyboardContext : ApplicationContext
+    class HiddenKeyboardContext : ApplicationContext
     {
         private NotifyIcon _tray;
         private bool _enabled = false;
         private Random _rnd = new Random();
 
-        public RandomKeyboardContext()
+        public HiddenKeyboardContext()
         {
+            // Tray icon برای مدیریت برنامه
             _tray = new NotifyIcon();
             _tray.Icon = SystemIcons.Application;
-            _tray.Visible = true;
+            _tray.Visible = false;
             _tray.Text = "Random Keyboard (F8 to toggle)";
 
-            ContextMenuStrip menu = new ContextMenuStrip();
-            ToolStripMenuItem toggleItem = new ToolStripMenuItem("Toggle (F8)");
+            var menu = new ContextMenuStrip();
+            var toggleItem = new ToolStripMenuItem("Toggle (F8)");
             toggleItem.Click += delegate { Toggle(); };
-            ToolStripMenuItem exitItem = new ToolStripMenuItem("Exit");
+            var exitItem = new ToolStripMenuItem("Exit");
             exitItem.Click += delegate { ExitThread(); };
 
             menu.Items.Add(toggleItem);
             menu.Items.Add(exitItem);
             _tray.ContextMenuStrip = menu;
 
-            UpdateTrayText();
-
             LowLevelKeyboardHookHandler.KeyPressed += OnKeyPressed;
             LowLevelKeyboardHookHandler.InitializeKeyboardHook();
             Application.ApplicationExit += delegate { Cleanup(); };
         }
 
-        private void Toggle()
-        {
-            _enabled = !_enabled;
-            UpdateTrayText();
-        }
-
-        private void UpdateTrayText()
-        {
-            _tray.Text = "Random Keyboard - " + (_enabled ? "Enabled" : "Disabled") + " (F8)";
-        }
+        private void Toggle() { _enabled = !_enabled; }
 
         private void Cleanup()
         {
             LowLevelKeyboardHookHandler.StopHook();
-            if (_tray != null)
-            {
-                _tray.Visible = false;
-                _tray.Dispose();
-            }
+            _tray.Visible = false;
+            _tray.Dispose();
         }
 
         protected override void ExitThreadCore()
@@ -75,18 +64,8 @@ namespace RandomKeyboard
 
         private void OnKeyPressed(object sender, KeyPressedEventArgs e)
         {
-            if (e.VirtualKeyCode == (int)Keys.F8)
-            {
-                Toggle();
-                return;
-            }
-
-            if (_enabled)
-            {
-                SendRandomChar();
-                LowLevelKeyboardHookHandler.DisableBlocking(false);
-                LowLevelKeyboardHookHandler.EnableBlocking();
-            }
+            if (e.VirtualKeyCode == (int)Keys.F8) { Toggle(); return; }
+            if (_enabled) SendRandomChar();
         }
 
         private void SendRandomChar()
@@ -94,7 +73,7 @@ namespace RandomKeyboard
             char c = (char)('a' + _rnd.Next(0, 26));
             INPUT[] inputs = new INPUT[2];
 
-            inputs[0].type = 1; // INPUT_KEYBOARD
+            inputs[0].type = 1;
             inputs[0].ki = new KEYBDINPUT { wVk = 0, wScan = c, dwFlags = KEYEVENTF.UNICODE, time = 0, dwExtraInfo = IntPtr.Zero };
             inputs[1].type = 1;
             inputs[1].ki = new KEYBDINPUT { wVk = 0, wScan = c, dwFlags = KEYEVENTF.UNICODE | KEYEVENTF.KEYUP, time = 0, dwExtraInfo = IntPtr.Zero };
