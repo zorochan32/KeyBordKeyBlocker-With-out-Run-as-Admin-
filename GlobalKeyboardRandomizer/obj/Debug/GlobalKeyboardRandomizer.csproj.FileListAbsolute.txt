@@ -1,0 +1,9 @@
+C:\Users\Alireza\source\repos\GlobalKeyboardRandomizer\GlobalKeyboardRandomizer\obj\Debug\GlobalKeyboardRandomizer.csproj.AssemblyReference.cache
+C:\Users\Alireza\source\repos\GlobalKeyboardRandomizer\GlobalKeyboardRandomizer\obj\Debug\GlobalKeyboardRandomizer.Properties.Resources.resources
+C:\Users\Alireza\source\repos\GlobalKeyboardRandomizer\GlobalKeyboardRandomizer\obj\Debug\GlobalKeyboardRandomizer.csproj.GenerateResource.cache
+C:\Users\Alireza\source\repos\GlobalKeyboardRandomizer\GlobalKeyboardRandomizer\obj\Debug\GlobalKeyboardRandomizer.csproj.CoreCompileInputs.cache
+C:\Users\Alireza\source\repos\GlobalKeyboardRandomizer\GlobalKeyboardRandomizer\bin\Debug\GlobalKeyboardRandomizer.exe.config
+C:\Users\Alireza\source\repos\GlobalKeyboardRandomizer\GlobalKeyboardRandomizer\bin\Debug\GlobalKeyboardRandomizer.exe
+C:\Users\Alireza\source\repos\GlobalKeyboardRandomizer\GlobalKeyboardRandomizer\bin\Debug\GlobalKeyboardRandomizer.pdb
+C:\Users\Alireza\source\repos\GlobalKeyboardRandomizer\GlobalKeyboardRandomizer\obj\Debug\GlobalKeyboardRandomizer.exe
+C:\Users\Alireza\source\repos\GlobalKeyboardRandomizer\GlobalKeyboardRandomizer\obj\Debug\GlobalKeyboardRandomizer.pdb
